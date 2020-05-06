@@ -18,6 +18,7 @@
             <input class="form-control" type="text" placeholder="Name" id="name" name="name" required>
             <input class="form-control" type="text" placeholder="Email" id="em" name="email" required>
             <input class="form-control" type="password" name="password" id="pwd" placeholder ="Password" required>
+            <button type="submit" id="submit" class="btn btn-success">Registra</button>
         </form>
     </div>
 <?php
@@ -30,7 +31,7 @@ if ($_SERVER['REQUEST-METHOD'] == 'POST'){
         echo "<script> alert('No deje campos vacios!')";
     }else{
         require ("../Model/Db.php");
-        $obj = new conexion();
+        $obj = new cliente();
         $result= $obj->insertCliente($name,$email,$password);
         var_dump($result);
     }
