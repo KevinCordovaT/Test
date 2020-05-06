@@ -15,12 +15,12 @@
 <body>
     <div>
         <form action="POST">
-            <input class="form-control" type="text" placeholder="Name",id="name",name="name", required>
-            <input class="form-control" type="text" placeholder="Email",id="em",name="email" required>
-            <input class="form-control" type="password" name="password" id="pwd",placeholder ="Password" required>
+            <input class="form-control" type="text" placeholder="Name" id="name" name="name" required>
+            <input class="form-control" type="text" placeholder="Email" id="em" name="email" required>
+            <input class="form-control" type="password" name="password" id="pwd" placeholder ="Password" required>
         </form>
     </div>
-    <?php
+<?php
 if ($_SERVER['REQUEST-METHOD'] == 'POST'){
     $name = $_POST['name'];
     $email = $_POST['password'];
